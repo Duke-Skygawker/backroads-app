@@ -8,22 +8,18 @@ const Tour = ({ img, date, title, description, country, length, price }) => {
         </div>
         <div className="tour-info">
           <div className="tour-title">
-            <h4>Tibet Adventure</h4>
+            <h4>{title}</h4>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-            vitae tempore voluptatum maxime reprehenderit eum quod
-            exercitationem fugit, qui corporis.
-          </p>
+          <p>{description}</p>
           <div className="tour-footer">
             <p>
               <span>
                 <i className="fas fa-map"></i>
               </span>{" "}
-              china
+              {country}
             </p>
-            <p>6 days</p>
-            <p>from $2100</p>
+            <p>{length}</p>
+            <p>from {price}</p>
           </div>
         </div>
       </article>

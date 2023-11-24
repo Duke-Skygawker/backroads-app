@@ -12,6 +12,7 @@ const tours = [
     country: "china",
     length: "6 days",
     price: "$2100",
+    id: "1",
   },
   {
     img: java,
@@ -22,6 +23,7 @@ const tours = [
     country: "indonesia",
     length: "11 days",
     price: "$1400",
+    id: "2",
   },
   {
     img: hongKong,
@@ -32,6 +34,7 @@ const tours = [
     country: "Hong Kong",
     length: "8 days",
     price: "$5000",
+    id: "3",
   },
   {
     img: kenya,
@@ -42,6 +45,7 @@ const tours = [
     country: "Kenya",
     length: "20 days",
     price: "$3300",
+    id: "4",
   },
 ];
 export default tours;
