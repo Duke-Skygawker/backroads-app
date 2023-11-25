@@ -1,4 +1,6 @@
 import logo from "../../images/logo.svg";
+import pageLinks from "./pageLinksObj";
+import Navli from "./Navli";
 
 const Navbar = () => {
   return (
@@ -12,33 +14,9 @@ const Navbar = () => {
             </button>
           </div>
           <ul className="nav-links" id="nav-links">
-            <li>
-              <a href="#home" className="nav-link">
-                {" "}
-                home{" "}
-              </a>
-            </li>
-
-            <li>
-              <a href="#about" className="nav-link">
-                {" "}
-                about{" "}
-              </a>
-            </li>
-
-            <li>
-              <a href="#services" className="nav-link">
-                {" "}
-                services{" "}
-              </a>
-            </li>
-
-            <li>
-              <a href="#tours" className="nav-link">
-                {" "}
-                tours
-              </a>
-            </li>
+            {pageLinks.map((link) => (
+              <Navli {...link} key={link.id} />
+            ))}
           </ul>
 
           <ul className="nav-icons">
