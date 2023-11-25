@@ -1,28 +1,14 @@
+import pageLinks from "./pageLinksObj";
+import Navli from "./Navli";
+
 const Footer = () => {
   return (
     <>
       <footer className="section footer">
         <ul className="footer-links">
-          <li>
-            <a href="#home" className="footer-link">
-              home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="footer-link">
-              about
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="footer-link">
-              services
-            </a>
-          </li>
-          <li>
-            <a href="#featured" className="footer-link">
-              featured
-            </a>
-          </li>
+          {pageLinks.map((link) => (
+            <Navli {...link} key={link.id} className={"footer-link"} />
+          ))}
         </ul>
         <ul className="footer-icons">
           <li>

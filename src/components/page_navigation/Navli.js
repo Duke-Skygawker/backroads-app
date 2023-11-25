@@ -1,7 +1,7 @@
-const Navli = ({ href, name }) => {
+const Navli = ({ href, name, className }) => {
   return (
     <li>
-      <a href={href} className="nav-link">
+      <a href={href} className={className}>
         {" "}
         {name}{" "}
       </a>

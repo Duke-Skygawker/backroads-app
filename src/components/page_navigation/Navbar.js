@@ -15,7 +15,7 @@ const Navbar = () => {
           </div>
           <ul className="nav-links" id="nav-links">
             {pageLinks.map((link) => (
-              <Navli {...link} key={link.id} />
+              <Navli {...link} key={link.id} className={"nav-link"} />
             ))}
           </ul>
 
