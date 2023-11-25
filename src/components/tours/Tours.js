@@ -1,15 +1,12 @@
 import Tour from "./Tour";
 import tours from "./toursObj";
+import Title from "../Title";
 
 const Tours = () => {
   return (
     <>
       <section className="section" id="tours">
-        <div className="section-title">
-          <h2>
-            featured <span>tours</span>
-          </h2>
-        </div>
+        <Title tt={"featured "} stt={"tours"} />
 
         <div className="section-center featured-center">
           {tours.map((tour) => (
