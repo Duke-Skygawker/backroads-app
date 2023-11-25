@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       {/* page links */}
-      <footer className="section footer">
+      <footer className="section footer" id="footer">
         <ul className="footer-links">
           {pageLinks.map((link) => (
             <Navli {...link} key={link.id} className={"footer-link"} />
