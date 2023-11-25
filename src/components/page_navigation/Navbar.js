@@ -1,6 +1,8 @@
 import logo from "../../images/logo.svg";
 import pageLinks from "./pageLinksObj";
+import socialLinks from "./socialLinksObj";
 import Navli from "./Navli";
+import SocialLi from "./SocialLi";
 
 const Navbar = () => {
   return (
@@ -20,33 +22,9 @@ const Navbar = () => {
           </ul>
 
           <ul className="nav-icons">
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-squarespace"></i>
-              </a>
-            </li>
+            {socialLinks.map((link) => (
+              <SocialLi {...link} key={link.id} className={"nav-icon"} />
+            ))}
           </ul>
         </div>
       </nav>
