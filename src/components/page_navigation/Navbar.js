@@ -7,13 +7,11 @@ import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-  // const [linksHeight, setLinksHeight] = useState(0);
-  // const [linksMargin, setLinksMargin] = useState(0);
   const [navWidth, setNavWidth] = useState(window.innerWidth);
   const navRef = useRef(null);
-  // const linksRef = useRef(null);
 
   useEffect(() => {
+    // get current nav width on window resize
     const handleResize = () => {
       const navWidth = navRef.current.getBoundingClientRect().width;
       if (navWidth >= 992) {
@@ -28,12 +26,9 @@ const Navbar = () => {
   }, []);
 
   const expandLinks = () => {
-    // const linksCont = linksRef.current.getBoundingClientRect();
-    // setLinksHeight(linksCont.x);
-    // setLinksMargin(linksCont.top * 2);
     setShowNavbar(!showNavbar);
   };
-
+  // control layout dynamically depending on window width
   return (
     <>
       <nav className="navbar" ref={navRef}>
@@ -50,6 +45,7 @@ const Navbar = () => {
             </button>
           </div>
           <ul
+            // control layout dynamically depending on window width
             className={
               showNavbar
                 ? navWidth >= 992
