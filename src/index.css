@@ -477,6 +477,9 @@ Navbar
   align-items: center;
 }
 .nav-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
   background: transparent;
   border: none;
   outline: none;
@@ -484,6 +487,7 @@ Navbar
   color: var(--clr-primary-5);
   cursor: pointer;
   transition: var(--transition);
+  z-index: 10;
 }
 .nav-toggle:hover {
   transform: scale(1.2);
@@ -510,7 +514,9 @@ Navbar
   transition: var(--transition);
 }
 .show-links {
-  height: 280px;
+  margin-top: 200px;
+  height: 240px;
+  background-color: var(--clr-white);
 }
 /* nav at bigger screen size */
 @media screen and (min-width: 992px) {
